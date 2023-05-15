@@ -2,7 +2,7 @@
 
 # Function to display the contents of the current directory
 function display_directory_contents {
-    
+    echo "Current directory: $(pwd)"
     echo
     echo "Select a directory:"
     local count=1
@@ -16,15 +16,15 @@ function display_directory_contents {
         fi
     done
 
-    echo "  [$count] Go to parent directory"
-    echo "  [0] Confirm directory"
+    echo "  [b] Go back a directory"
+    echo "  [x] Confirm directory"
     echo
-    echo "Current directory: $(pwd)"
-    read -r -p "Enter the number of the directory to navigate to, or 0 to confirm the current directory: " choice
 
-    if [[ "$choice" -eq 0 ]]; then
+    read -r -p "Enter the number of the directory to navigate to, 'b' to go back a directory, or 'x' to confirm the current directory: " choice
+
+    if [[ "$choice" == "x" ]]; then
         return 0
-    elif [[ "$choice" -eq "$count" ]]; then
+    elif [[ "$choice" == "b" ]]; then
         cd .. || exit
         display_directory_contents
     elif [[ "$choice" -gt 0 ]] && [[ "$choice" -lt "$count" ]]; then
