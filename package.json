@@ -1,0 +1,17 @@
+{
+  "name": "lp-replace-script",
+  "version": "1.0.0",
+  "description": "This script is a utility for replacing content between two specific sections in Markdown files. The script prompts for the starting and ending section titles and the content to replace. The starting and ending titles must be preceded by triple hash (###).",
+  "main": "replace.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^11.2.0",
+    "glob": "^10.3.10",
+    "inquirer": "^9.2.14"
+  }
+}
