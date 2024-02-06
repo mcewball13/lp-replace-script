@@ -1,7 +1,3 @@
-To recreate the README for the Node.js version of the Markdown Content Replacement Script, you'll want to include instructions tailored to a Node.js environment, focusing on installation via `npm` or `yarn`, running the script, and its prerequisites. Here's an example README tailored to your Node.js project:
-
----
-
 # Markdown Content Replacement Script
 
 This Node.js script provides a utility for replacing content between two specific sections in Markdown files. It prompts the user for starting and ending section titles (which must be preceded by `###` as per Markdown syntax) and the content to replace between these sections.
